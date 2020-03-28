@@ -1,49 +1,79 @@
 ---
 ---
 
+@font-face {
+    font-family: CothamSans;
+    src: url("../fonts/CothamSans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: LibreBaskerville;
+    src: url("../fonts/LibreBaskerville-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: YoungSerif;
+    src: url("../fonts/YoungSerif-Regular.otf") format("opentype");
+}
+
+a {
+    color: #0F6BDC;
+}
+
 body {
-	font-family: TimesNewRoman, serif;
+    background: #f6faff;
+    color: #05254c;
+	font-family: CothamSans, TimesNewRoman, serif;
 	font-size: 1.25rem;
 	margin-left: auto;
 	margin-top: 2em;
 	margin-right: auto;
-	max-width: 768px;
+	line-height: 1.75rem;
+}
+
+h1, h2 {
+    font-family: YoungSerif;
 }
 
 hr {
-	border: 0;
+    border: 0;
     height: 0;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #05254c;
 }
 
 .wrapper {
-	.header {
-		h1 {
-			font-size: 1.5em;
-		}
+    .header {
+        h1 {
+            font-size: 2em;
+        }
 
-		img {
-			width: 196px;
-		}
+        img#me {
+            width: 196px;
+        }
 
-		ul {
-			display: table;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
+        img.icons {
+            width: 16px;
+            padding-right: 8px;
+        }
 
-		li {
-			display: table-row;
-		}
+        p {
+            margin-bottom: 0.5em;
+        }
+    }
 
-		.thing {
-			display: table-cell;
-			padding-right: 1em;
-		}
-	}
+    h2 {
+        font-size: 1.25em;
+    }
+}
 
-	h2 {
-		font-size: 1.25em;
-	}
+@media only screen and (min-width: 900px) {
+    body {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        margin: 16px;
+    }
 }
